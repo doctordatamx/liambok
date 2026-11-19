@@ -21,6 +21,10 @@
 .chapter-text table { border-collapse: collapse; min-width: 30rem; }
 .chapter-text th, .chapter-text td { border: 1px solid var(--line); padding: .65rem .8rem; text-align: start; vertical-align: top; }
 .chapter-text th { background: var(--panel); }
+.chapter-text .references { list-style: none; padding: 0; }
+.references li + li { margin-top: 1.3rem; }
+.references p { margin: 0; padding-inline-start: 1.35rem; text-indent: -1.35rem; }
+.references p + p { color: var(--muted); text-indent: 0; font-size: .92em; }
 @media (min-width: 64.01rem) and (min-height: 34rem) {
   .chapter-toc { position: sticky; top: 1.25rem; max-height: calc(100vh - 2.5rem); overflow-y: auto; }
 }
