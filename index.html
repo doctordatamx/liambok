@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LIAMBoK, un cuerpo de conocimientos vivo sobre el autismo que conecta fuentes, evidencia y revisión editorial.">
+  <meta name="theme-color" content="#112d2b">
+  <title>LIAMBoK · Autismo Vivo</title>
+  <style>
+    :root { color-scheme: light; --ink: #112d2b; --paper: #f3f8f5; --mint: #bfeacb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: system-ui, sans-serif; }
+    .wrap { width: min(100% - 3rem, 66rem); margin-inline: auto; }
+    header { background: var(--ink); color: #fff; }
+    .cover { padding-block: clamp(4rem, 12vw, 8rem); }
+    .brand { margin: 0 0 1.4rem; color: var(--mint); font-weight: 650; letter-spacing: .12em; }
+    h1, h2 { font-family: Georgia, serif; font-weight: 400; line-height: 1.05; }
+    h1 { margin: 0; font-size: clamp(3.25rem, 10vw, 7.25rem); letter-spacing: -.055em; }
+    .subtitle { margin: 1.45rem 0 0; color: var(--mint); font-size: clamp(1.25rem, 3.4vw, 2rem); }
+    main { padding-block: clamp(2.75rem, 7vw, 5rem); }
+    .content { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(2rem, 7vw, 6rem); }
+    h2 { margin: 0 0 1rem; font-size: clamp(1.9rem, 4vw, 2.65rem); }
+    p { line-height: 1.7; }
+    .content p { margin: 0; font-size: 1.075rem; }
+    .dedication { border-left: .2rem solid #528b68; padding-left: 1.35rem; }
+    @media (max-width: 44rem) { .content { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap cover">
+      <p class="brand">LIAMBoK</p>
+      <h1>Autismo Vivo</h1>
+      <p class="subtitle">Un cuerpo de conocimientos sobre el autismo</p>
+    </div>
+  </header>
+  <main class="wrap content">
+    <section aria-labelledby="about">
+      <h2 id="about">Sobre el proyecto</h2>
+      <p>LIAMBoK organiza literatura científica y fuentes documentales sobre el autismo. Vincula las afirmaciones de cada capítulo con sus referencias para que puedan consultarse, revisarse y actualizarse cuando aparezca nueva evidencia.</p>
+    </section>
+    <section class="dedication" aria-labelledby="dedication">
+      <h2 id="dedication">Dedicatoria</h2>
+      <p>A las personas autistas que comparten su experiencia y enseñan a escuchar mejor. A sus familias, a quienes acompañan y a quienes trabajan para que cada persona pueda decidir sobre su propia vida y participar plenamente en su comunidad.</p>
+    </section>
+  </main>
+</body>
+</html>
