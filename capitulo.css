@@ -1,0 +1,24 @@
+.chapter { padding-block: clamp(2.5rem, 7vw, 5rem); }
+.chapter-heading { padding-bottom: clamp(1.8rem, 4vw, 3.2rem); border-bottom: 1px solid var(--line); }
+.chapter-heading h1 { font-size: clamp(2.7rem, 7vw, 5.75rem); }
+.chapter-label { color: var(--mint); font-weight: 650; margin-bottom: .7rem; }
+.reading-layout { display: grid; grid-template-columns: minmax(11rem, 16rem) minmax(0, 72ch); gap: clamp(1.5rem, 5vw, 4rem); align-items: start; padding-top: 2.3rem; }
+.chapter-toc { display: block; padding: 1rem 1.2rem; background: var(--panel); border: 1px solid var(--line); border-radius: .5rem; }
+.chapter-toc h2 { font: 700 1rem/1.4 system-ui, sans-serif; margin: 0 0 .5rem; }
+.chapter-toc ul { margin: 0; padding: 0; list-style: none; }
+.chapter-toc a { display: flex; min-height: 2.4rem; }
+.chapter-text { min-width: 0; font-size: clamp(1rem, 2vw, 1.125rem); line-height: 1.75; }
+.chapter-text h2 { margin: 2.4rem 0 1rem; font-size: clamp(1.8rem, 4vw, 2.55rem); }
+.chapter-text h3 { margin: 1.7rem 0 .65rem; }
+.chapter-text blockquote { margin: 0 0 1.6rem; padding: .85rem 1rem; border-inline-start: .2rem solid var(--mint); background: var(--panel); }
+.chapter-text blockquote p { margin: 0; }
+.chapter-text li + li { margin-top: .5rem; }
+.chapter-text code, .chapter-text a { overflow-wrap: anywhere; }
+.chapter-text code { font-size: .88em; color: var(--muted); }
+.chapter-text [id] { scroll-margin-top: 1.25rem; }
+.chapter-text li:target { outline: 2px solid var(--mint); outline-offset: .3rem; }
+.table-scroll { overflow-x: auto; margin-block: 1.25rem; }
+.chapter-text table { border-collapse: collapse; min-width: 30rem; }
+.chapter-text th, .chapter-text td { border: 1px solid var(--line); padding: .65rem .8rem; text-align: start; vertical-align: top; }
+.chapter-text th { background: var(--panel); }
+@media (max-width: 52rem) { .reading-layout { grid-template-columns: minmax(0, 1fr); } }
