@@ -1,0 +1,54 @@
+:root { color-scheme: dark; --navy: #081526; --panel: #102238; --line: #3d5773; --text: #f3f7ff; --muted: #bfcee1; --mint: #8ce8db; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--navy); color: var(--text); font: 1rem/1.65 system-ui, sans-serif; }
+a { color: var(--mint); text-underline-offset: .24em; }
+a:hover { text-decoration-thickness: .14em; }
+:focus-visible { outline: 3px solid #ffd96e; outline-offset: 4px; }
+.skip { position: absolute; left: 1rem; top: .75rem; z-index: 3; padding: .6rem 1rem; background: var(--navy); transform: translateY(-180%); }
+.skip:focus { transform: none; }
+.shell { width: min(100% - clamp(2rem, 8vw, 7rem), 77rem); margin-inline: auto; }
+.bar, nav, .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem 1.5rem; }
+.bar { justify-content: space-between; min-height: 4.5rem; padding-block: .55rem; }
+.masthead, footer { border-block-end: 1px solid var(--line); }
+nav a, .bar a, .actions a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.brand { gap: .35em; font-size: 1.35rem; letter-spacing: .05em; color: var(--text); font-weight: 750; text-decoration: none; }
+.brand span, h1 span { color: var(--mint); }
+.hero { position: relative; isolation: isolate; background: #0c2138; }
+.hero-art, .hero::after { position: absolute; inset: 0; }
+.hero-art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; }
+.hero::after { content: ""; background: linear-gradient(90deg, #081526 0%, #081526f5 28%, #081526e6 48%, transparent 77%); }
+.hero-inner { display: grid; align-items: center; min-height: clamp(29rem, 59vw, 41rem); padding-block: clamp(3rem, 8vw, 6rem); }
+.hero-copy { max-width: 48%; position: relative; z-index: 1; }
+h1, h2 { font-family: Georgia, serif; font-weight: 400; line-height: 1.08; }
+h1 { font-size: clamp(3rem, 8vw, 6.7rem); letter-spacing: -.055em; margin: 0; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 1rem; }
+h3 { font-size: 1.22rem; margin: 0 0 .35rem; }
+p { margin: 0 0 1.25rem; }
+.hero-copy p { max-width: 29rem; font-size: clamp(1.12rem, 2.5vw, 1.4rem); margin: 1.4rem 0 1.8rem; }
+.primary, .kofi, button { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: .6rem 1rem; border-radius: .4rem; font: inherit; font-weight: 700; text-decoration: none; border: 1px solid transparent; }
+.primary, button { background: var(--mint); color: #081526; }
+button { cursor: pointer; }
+button[hidden] { display: none; }
+.kofi { padding: 0; }
+.kofi img { display: block; width: min(100%, 11rem); height: auto; }
+.primary:hover, .kofi:hover, button:hover { text-decoration: underline; }
+.dedication { display: grid; grid-template-columns: auto 1fr; gap: clamp(.8rem, 4vw, 2rem); max-width: 54rem; padding-block: clamp(2.5rem, 7vw, 5rem); }
+.dedication p, .area p { color: var(--muted); margin: 0; }
+.dedication p + p { margin-top: 1rem; }
+.infinity { color: var(--mint); font: 2rem/1.25 Georgia, serif; }
+.section, .closing { border-top: 1px solid var(--line); padding-block: clamp(2.25rem, 6vw, 4rem); }
+.topics { margin-block: 1.2rem; }
+.topics a { padding-inline: .85rem; border: 1px solid var(--line); border-radius: .4rem; }
+.area { padding-block: 1rem; max-width: 57rem; }
+.closing { display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(2rem, 7vw, 5rem); }
+.citation { background: var(--panel); border-inline-start: .2rem solid var(--mint); padding: 1rem; overflow-wrap: anywhere; }
+#estado-cita { margin: .5rem 0 0; color: var(--muted); }
+footer { border-block: 1px solid var(--line) 0; color: var(--muted); }
+@media (max-width: 43rem) { .closing { grid-template-columns: 1fr; } }
+@media (max-width: 54rem) {
+  .hero-inner { min-height: 36rem; align-items: end; padding-top: 12rem; }
+  .hero-copy { max-width: 34rem; }
+  .hero-art img { object-position: 72% center; }
+  .hero::after { background: linear-gradient(0deg, #081526 6%, #081526f5 48%, #081526d9 66%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }

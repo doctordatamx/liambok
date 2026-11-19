@@ -3,46 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="LIAMBoK, un cuerpo de conocimientos vivo sobre el autismo que conecta fuentes, evidencia y revisión editorial.">
-  <meta name="theme-color" content="#112d2b">
-  <title>LIAMBoK · Autismo Vivo</title>
-  <style>
-    :root { color-scheme: light; --ink: #112d2b; --paper: #f3f8f5; --mint: #bfeacb; }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font-family: system-ui, sans-serif; }
-    .wrap { width: min(100% - 3rem, 66rem); margin-inline: auto; }
-    header { background: var(--ink); color: #fff; }
-    .cover { padding-block: clamp(4rem, 12vw, 8rem); }
-    .brand { margin: 0 0 1.4rem; color: var(--mint); font-weight: 650; letter-spacing: .12em; }
-    h1, h2 { font-family: Georgia, serif; font-weight: 400; line-height: 1.05; }
-    h1 { margin: 0; font-size: clamp(3.25rem, 10vw, 7.25rem); letter-spacing: -.055em; }
-    .subtitle { margin: 1.45rem 0 0; color: var(--mint); font-size: clamp(1.25rem, 3.4vw, 2rem); }
-    main { padding-block: clamp(2.75rem, 7vw, 5rem); }
-    .content { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(2rem, 7vw, 6rem); }
-    h2 { margin: 0 0 1rem; font-size: clamp(1.9rem, 4vw, 2.65rem); }
-    p { line-height: 1.7; }
-    .content p { margin: 0; font-size: 1.075rem; }
-    .dedication { border-left: .2rem solid #528b68; padding-left: 1.35rem; }
-    @media (max-width: 44rem) { .content { grid-template-columns: 1fr; } }
-  </style>
+  <meta name="theme-color" content="#081526">
+  <meta name="description" content="LIAM BoK reúne conocimiento científico, educativo, jurídico y social sobre el autismo.">
+  <title>Libro Vivo: Autismo | LIAM BoK</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="citation.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="wrap cover">
-      <p class="brand">LIAMBoK</p>
-      <h1>Autismo Vivo</h1>
-      <p class="subtitle">Un cuerpo de conocimientos sobre el autismo</p>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="masthead">
+    <div class="shell bar">
+      <a class="brand" href="./">LIAM <span>BoK</span></a>
+      <nav aria-label="Navegación principal">
+        <a href="#explorar">Explorar</a>
+        <a href="#como-citar">Cómo citar</a>
+        <a href="#apoyo">Apoya el proyecto</a>
+      </nav>
     </div>
   </header>
-  <main class="wrap content">
-    <section aria-labelledby="about">
-      <h2 id="about">Sobre el proyecto</h2>
-      <p>LIAMBoK organiza literatura científica y fuentes documentales sobre el autismo. Vincula las afirmaciones de cada capítulo con sus referencias para que puedan consultarse, revisarse y actualizarse cuando aparezca nueva evidencia.</p>
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo">
+      <picture class="hero-art">
+        <source type="image/avif" srcset="portada-800.avif 800w, portada.avif 1600w" sizes="100vw">
+        <img src="portada.webp" alt="" width="1600" height="900" fetchpriority="high">
+      </picture>
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <h1 id="titulo">Libro Vivo:<br><span>Autismo</span></h1>
+          <p>Un cuerpo vivo de conocimiento entre la evidencia científica y la comprensión del espectro autista</p>
+          <a class="primary" href="#libro">Explorar el libro vivo</a>
+        </div>
+      </div>
     </section>
-    <section class="dedication" aria-labelledby="dedication">
-      <h2 id="dedication">Dedicatoria</h2>
-      <p>A las personas autistas que comparten su experiencia y enseñan a escuchar mejor. A sus familias, a quienes acompañan y a quienes trabajan para que cada persona pueda decidir sobre su propia vida y participar plenamente en su comunidad.</p>
-    </section>
+    <div class="shell">
+      <section class="dedication" aria-labelledby="para-liam">
+        <span class="infinity" aria-hidden="true">∞</span>
+        <div>
+          <h2 id="para-liam">Para Liam.</h2>
+          <p>Me enseñó a mirar el mundo desde una perspectiva completamente nueva y a entender que la mente humana no tiene una sola forma de ser brillante.</p>
+          <p>Este libro vivo nació por ti y para ti. Es el testimonio de mi búsqueda por comprenderte mejor, por construir puentes y por asegurarme de que nunca nadie te defina con etiquetas estrechas. Gracias por ser uno de mis mayores maestros, mi inspiración constante y la razón por la cual este proyecto sigue creciendo cada día.</p>
+        </div>
+      </section>
+      <section class="section" id="explorar" aria-labelledby="explorar-titulo">
+        <h2 id="explorar-titulo">Explora LIAM BoK</h2>
+        <p>LIAM BoK reúne fuentes científicas, educativas, jurídicas y sociales en un cuerpo de conocimiento que puede revisarse y actualizarse. Las piezas de la ilustración representan cómo se conectan esas fuentes.</p>
+        <p>Los materiales de estas áreas se incorporarán al sitio a medida que se autoricen para publicación.</p>
+        <nav class="topics" aria-label="Áreas del cuerpo de conocimiento">
+          <a href="#libro">Libro vivo</a>
+          <a href="#biblioteca">Biblioteca científica</a>
+          <a href="#educacion-legislacion">Educación y legislación</a>
+        </nav>
+        <div class="area" id="libro">
+          <h3>Libro vivo</h3>
+          <p>Organiza el conocimiento sobre el autismo en capítulos revisables. Cada capítulo busca vincular sus afirmaciones con las fuentes que las sustentan.</p>
+        </div>
+        <div class="area" id="biblioteca">
+          <h3>Biblioteca científica</h3>
+          <p>Reúne referencias y documentación científica para rastrear el origen de la evidencia utilizada en el libro.</p>
+        </div>
+        <div class="area" id="educacion-legislacion">
+          <h3>Educación y legislación</h3>
+          <p>El área educativa reúne recursos sobre aprendizaje y participación. El área jurídica organiza fuentes sobre derechos, accesibilidad y marcos normativos.</p>
+        </div>
+      </section>
+      <div class="closing">
+        <section id="como-citar" aria-labelledby="cita-titulo">
+          <h2 id="cita-titulo">Cómo citar</h2>
+          <p class="citation" id="cita">Avalos Reyes, F. (2026). Libro Vivo: Autismo — Un repositorio dinámico entre la evidencia científica y la comprensión del espectro autista [Repositorio de GitHub]. GitHub. <a href="https://github.com/doctordatamx/liambok">https://github.com/doctordatamx/liambok</a></p>
+          <div class="actions">
+            <button type="button" id="copiar-cita" hidden>Copiar cita</button>
+            <a href="CITATION.cff" download>Descargar CITATION.cff</a>
+          </div>
+          <p id="estado-cita" role="status"></p>
+        </section>
+        <section id="apoyo" aria-labelledby="apoyo-titulo">
+          <h2 id="apoyo-titulo">Apoya este proyecto</h2>
+          <p>Puedes contribuir de manera voluntaria al mantenimiento de LIAM BoK.</p>
+          <a class="kofi" href="https://ko-fi.com/A5X5242156"><img src="kofi.avif" alt="Apoyar en Ko-fi" width="980" height="198" loading="lazy"></a>
+        </section>
+      </div>
+    </div>
   </main>
+  <footer><div class="shell bar"><span>LIAM BoK</span><a href="https://github.com/doctordatamx/liambok">Repositorio en GitHub</a></div></footer>
 </body>
 </html>
