@@ -1,0 +1,26 @@
+.public-stats { padding-block: clamp(2rem, 5vw, 4rem); }
+.public-stats h1 { font-size: clamp(2.8rem, 7vw, 5rem); margin-bottom: .8rem; }
+.public-stats h2 { font-size: clamp(1.55rem, 3vw, 2.15rem); }
+.public-stats .hint, #stats-date, #stats-status { color: var(--muted); }
+.public-stats .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); gap: .85rem; margin-bottom: 1rem; }
+.public-stats .kpi, .public-stats .card { border: 1px solid var(--line); border-radius: .65rem; background: var(--panel); padding: clamp(.9rem, 2vw, 1.4rem); min-width: 0; }
+.public-stats .card { margin-bottom: 1rem; }
+.public-stats .kpi .value { font-size: 1.75rem; font-weight: 750; color: var(--mint); }
+.stats-grid, .stats-network-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.stats-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .6rem; }
+.public-stats label { display: block; margin: 0 0 .8rem; }
+.public-stats select { background: var(--navy); color: var(--text); font: inherit; border: 1px solid var(--line); border-radius: .35rem; padding: .4rem .65rem; min-height: 2.75rem; max-width: 100%; }
+.stats-bars .bar-row { display: grid; grid-template-columns: minmax(6.5rem, 1fr) minmax(2rem, 2fr) max-content; gap: .65rem; align-items: center; padding-block: .32rem; }
+.stats-bars .bar-row span { overflow-wrap: anywhere; }
+.bar-track { height: .65rem; border-radius: .4rem; background: var(--navy); overflow: hidden; }
+.bar-fill { height: 100%; border-radius: inherit; background: var(--mint); }
+.stats-scroll, .public-stats .table-wrap { overflow: auto; max-height: 29rem; }
+#stats-graph { display: block; width: 100%; height: auto; background: var(--navy); border: 1px solid var(--line); border-radius: .55rem; }
+.public-stats table { width: 100%; border-collapse: collapse; }
+.public-stats th, .public-stats td { padding: .55rem .4rem; text-align: start; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.public-stats th { position: sticky; top: 0; background: var(--navy); }
+@media (max-width: 58rem) { .stats-grid, .stats-network-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 28rem) {
+  .stats-bars .bar-row { grid-template-columns: minmax(0, 1fr) minmax(1.4rem, .55fr) max-content; }
+  .public-stats th, .public-stats td { font-size: .9rem; }
+}

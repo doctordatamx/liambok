@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081526">
+  <meta name="description" content="Estadísticas del catálogo de LIAM BoK y red de coautoría.">
+  <title>Estadísticas | LIAM BoK</title>
+  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="estadisticas.css">
+  <script src="estadisticas.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="masthead"><div class="shell bar">
+    <a class="brand" href="./">LIAM <span>BoK</span></a>
+    <nav aria-label="Navegación principal"><a href="./#libro">Libro vivo</a><a href="estadisticas.html" aria-current="page">Estadísticas</a></nav>
+  </div></header>
+  <main id="contenido" class="shell public-stats">
+    <h1>Estadísticas</h1>
+    <p>Distribución de archivos, bibliometría y colaboraciones del catálogo de LIAM BoK.</p>
+    <p id="stats-date"></p>
+    <noscript><p>Activa JavaScript para ver los gráficos o <a href="estadisticas.json">consulta los datos en JSON</a>.</p></noscript>
+<section id="view-statistics" aria-label="Estadísticas">
+      <p id="stats-status" role="status">Cargando estadísticas…</p>
+      <div id="stats-kpis" class="kpis"></div>
+      <article class="card">
+        <h2>Archivos por dominio</h2>
+        <p class="hint">Recuento de archivos inventariados en el catálogo.</p>
+        <div id="stats-domains" class="stats-bars"></div>
+      </article>
+      <article class="card">
+        <div class="stats-heading">
+          <h2>Artículos por año</h2>
+          <label>Periodo <select id="stats-period"><option value="20">Últimos 20 años del corpus</option><option value="all">Todos los años</option></select></label>
+        </div>
+        <div id="stats-years" class="stats-bars stats-scroll" tabindex="0" role="region" aria-label="Recuentos por año"></div>
+      </article>
+      <div class="grid-2 stats-grid">
+        <article class="card"><h2>Revistas con más artículos</h2><div id="stats-journals" class="stats-bars"></div></article>
+        <article class="card"><h2>Diseños de los artículos</h2><p class="hint">Incluye clasificaciones preliminares del triaje.</p><div id="stats-designs" class="stats-bars"></div></article>
+      </div>
+      <article class="card">
+        <h2>Red de coautoría</h2>
+        <p id="stats-network-note" class="hint"></p>
+        <div id="stats-network" hidden>
+          <label>Resaltar autor <select id="stats-author"></select></label>
+          <div class="stats-network-grid">
+            <canvas id="stats-graph" width="720" height="520" aria-hidden="true"></canvas>
+            <div id="stats-pairs" class="table-wrap" tabindex="0" role="region" aria-label="Pares de coautores"></div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer><div class="shell bar"><span>LIAM BoK</span><a href="estadisticas.json">Datos en JSON</a></div></footer>
+</body>
+</html>
